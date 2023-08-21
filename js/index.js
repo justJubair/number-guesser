@@ -35,8 +35,11 @@ guessBtn.addEventListener('click', () => {
         guessInput.disabled = true;
         guessInput.style.borderColor = 'red';
         setMessage(`Game over, you lost. The correct number was ${winningNum}`);
+        // guesses left - game continues
        } else {
         guessInput.style.borderColor = 'red';
+        // clear guess input field
+        guessInput.value = '';
         setMessage(`${guess} is not correct. You have ${guessLeft} guesses left`, 'red')
        }
     }
